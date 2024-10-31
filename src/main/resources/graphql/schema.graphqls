@@ -1,0 +1,18 @@
+type Mutation{
+    addTask(taskRequestDTO: TaskRequestDTO): TaskResponseDTO
+}
+
+type Query{
+    findAllTask: [TaskResponseDTO]
+}
+
+input TaskRequestDTO{
+    description: String!,
+    status_type: String
+}
+
+type TaskResponseDTO{
+    id: ID,
+    description: String,
+    status_type: String
+}
