@@ -1,6 +1,7 @@
 package com.github.maikoncarlos.program_graphql.repository.entity;
 
-import com.github.maikoncarlos.program_graphql.service.StatusType;
+import com.github.maikoncarlos.program_graphql.controller.dto.TaskRequestDTO;
+import com.github.maikoncarlos.program_graphql.controller.StatusType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,9 +24,14 @@ public class TaskEntity {
     @Column(name = "description")
     private String description;
     @Column(name = "status_type")
+    @Enumerated(EnumType.STRING)
     private StatusType statusType;
     @Column(name = "date_update")
-    private Instant dateCreated = Instant.now();
+    private Instant dateCreated;
     @Column(name = "data_update")
     private Instant dataUpdate;
+
+    public static TaskEntity fromEntity(TaskRequestDTO task) {
+        return new TaskEntity(null, task.description(), task.status_type(), Instant.now(), null );
+    }
 }
