@@ -1,6 +1,6 @@
 package com.github.maikoncarlos.program_graphql.controller.dto;
 
-import com.github.maikoncarlos.program_graphql.controller.StatusType;
+import com.github.maikoncarlos.program_graphql.service.StatusType;
 import com.github.maikoncarlos.program_graphql.repository.entity.TaskEntity;
 
 import java.util.List;

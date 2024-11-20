@@ -1,7 +1,7 @@
 package com.github.maikoncarlos.program_graphql.repository.entity;
 
 import com.github.maikoncarlos.program_graphql.controller.dto.TaskRequestDTO;
-import com.github.maikoncarlos.program_graphql.controller.StatusType;
+import com.github.maikoncarlos.program_graphql.service.StatusType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

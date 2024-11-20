@@ -1,4 +1,4 @@
-package com.github.maikoncarlos.program_graphql.controller;
+package com.github.maikoncarlos.program_graphql.service;
 
 public enum StatusType {
 
